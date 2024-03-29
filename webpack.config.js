@@ -40,7 +40,7 @@ module.exports = {
     clean: true,
   },
   devServer: {
-    static: ["public", "src"],
+    static: ["src"],
     compress: true,
     port: 9000,
   },
@@ -48,7 +48,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "Development",
-      template: path.resolve(__dirname, "public", "index.html"),
+      template: path.resolve(__dirname, "src/public", "index.html"),
     }),
     new MiniCssExtractPlugin({
       filename: "bundle.css",
@@ -62,7 +62,7 @@ module.exports = {
       //     to: "img",
       //   },
       // ],
-      patterns: [{ from: "./public/assets/imgs", to: "img" }],
+      patterns: [{ from: "./src/public/assets/imgs", to: "img" }],
     }),
   ],
   optimization: {
